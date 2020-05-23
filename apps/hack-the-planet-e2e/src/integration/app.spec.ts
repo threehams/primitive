@@ -1,13 +1,13 @@
-import { getGreeting } from '../support/app.po';
+import { getGreeting } from "../support/app.po";
 
-describe('hack-the-planet', () => {
-  beforeEach(() => cy.visit('/'));
+describe("hack-the-planet", () => {
+  beforeEach(() => {
+    return cy.visit("/");
+  });
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to hack-the-planet!');
+  it("should display welcome message", () => {
+    cy.get('[data-test="todo"]').should("have.length", 2);
+    cy.get("button#add-todo").click();
+    cy.get('[data-test="todo"]').should("have.length", 3);
   });
 });
