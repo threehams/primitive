@@ -17,7 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@primitive/data": ["libs/data/src/index.ts"],
-      "@primitive/ui": ["libs/ui/src/index.ts"]
+      "@primitive/ui": ["libs/ui/src/index.ts"],
+      "@primitive/home-page": ["libs/home-page/src/index.ts"],
+      "@primitive/index-page": ["libs/index-page/src/index.ts"]
     },
     "strict": true
   },

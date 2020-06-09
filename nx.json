@@ -20,20 +20,26 @@
   },
   "projects": {
     "hack-the-planet": {
-      "tags": []
+      "tags": ["app"]
     },
     "hack-the-planet-e2e": {
-      "tags": [],
-      "implicitDependencies": ["hack-the-planet"]
+      "tags": ["app"],
+      "implicitDependencies": ["hack-the-planet", "api"]
     },
     "api": {
-      "tags": []
+      "tags": ["api"]
     },
     "data": {
-      "tags": []
+      "tags": ["client:shared", "server:shared"]
     },
     "ui": {
-      "tags": []
+      "tags": ["client:shared"]
+    },
+    "home-page": {
+      "tags": ["page"]
+    },
+    "index-page": {
+      "tags": ["page"]
     }
   }
 }

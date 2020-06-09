@@ -25,7 +25,15 @@
         "enforceBuildableLibDependency": true,
         "allow": [],
         "depConstraints": [
-          { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
+          {
+            "sourceTag": "app",
+            "onlyDependOnLibsWithTags": ["page", "client:shared"]
+          },
+          {
+            "sourceTag": "api",
+            "onlyDependOnLibsWithTags": ["client:shared"]
+          },
+          { "sourceTag": "page", "onlyDependOnLibsWithTags": ["client:shared"] }
         ]
       }
     ]

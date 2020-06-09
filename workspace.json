@@ -200,6 +200,62 @@
           }
         }
       }
+    },
+    "home-page": {
+      "root": "libs/home-page",
+      "sourceRoot": "libs/home-page/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/home-page/.eslintrc",
+            "tsConfig": [
+              "libs/home-page/tsconfig.lib.json",
+              "libs/home-page/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/home-page/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/home-page/jest.config.js",
+            "tsConfig": "libs/home-page/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "index-page": {
+      "root": "libs/index-page",
+      "sourceRoot": "libs/index-page/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/index-page/.eslintrc",
+            "tsConfig": [
+              "libs/index-page/tsconfig.lib.json",
+              "libs/index-page/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/index-page/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/index-page/jest.config.js",
+            "tsConfig": "libs/index-page/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

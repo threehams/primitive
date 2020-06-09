@@ -1,5 +1,3 @@
-import { getGreeting } from "../support/app.po";
-
 describe("hack-the-planet", () => {
   beforeEach(() => {
     return cy.visit("/");
